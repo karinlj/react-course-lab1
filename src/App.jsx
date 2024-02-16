@@ -16,22 +16,23 @@ function App() {
     },
   ]);
 
-  const handleChangeName = (e) => {
-    console.log("handleChangeName: ", e.target.value);
-    setFormData({
-      ...formData,
-      catname: e.target.value,
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submit");
+
+    const newCat = {
+      id: Math.random(),
+      catname: formData.catname,
+    };
+
+    console.log("newCat: ", newCat);
+    setCats([...cats, newCat]);
   };
 
   useEffect(() => {
     console.log("formData.catname: ", formData.catname);
-  }, [formData]);
+    console.log("cats: ", cats);
+  }, [formData, cats]);
 
   return (
     <>
@@ -69,7 +70,7 @@ function App() {
                 required
                 value={formData.catname}
                 onChange={(e) => {
-                  handleChangeName(e);
+                  setFormData({ ...formData, catname: e.target.value });
                 }}
               />{" "}
             </label>
