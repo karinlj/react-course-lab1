@@ -33,6 +33,9 @@ h1 {
   color: $themecolorPink;
   margin: 1rem 0;
 }
+p {
+  color: #fff;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -48,10 +51,9 @@ button {
     outline-color: $themecolorBlue;
   }
 }
-p {
-  color: #fff;
-}
-.header-text {
+header {
   text-align: right;
-  font-weight: 600;
+  p {
+    color: $themecolorBlueSuperLight;
+  }
 }
