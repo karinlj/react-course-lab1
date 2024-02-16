@@ -10,10 +10,8 @@ ul {
 * {
   box-sizing: border-box;
 }
-
 :root {
   font-family: Inter, system-ui, Quicksand, Helvetica, Arial, sans-serif;
-
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -21,7 +19,6 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 body {
   margin: 0;
   min-width: 320px;
@@ -29,7 +26,6 @@ body {
   background: $themecolorBlue;
   font-size: 1.1rem;
 }
-
 h1 {
   width: 100%;
   font-size: 3.2em;
@@ -37,7 +33,6 @@ h1 {
   color: $themecolorPink;
   margin: 1rem 0;
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,7 +48,6 @@ button {
     outline-color: $themecolorBlue;
   }
 }
-
 p {
   color: #fff;
 }

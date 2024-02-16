@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.scss";
 import Header from "./components/Header";
+import ItemList from "./components/ItemList/ItemList";
 
 function App() {
   const defaultInputValues = {
@@ -65,39 +66,11 @@ function App() {
           If the house icon is enabled, the cat has found a new home.
         </p>
 
-        <ul className="cat-list">
-          {cats &&
-            cats.map((cat) => {
-              return (
-                <li className="cat-list-item" key={cat.id}>
-                  <div>
-                    {" "}
-                    <i className="fas fa-paw" aria-hidden="true"></i>
-                    <span>{cat.catname}</span>
-                  </div>
-
-                  <div>
-                    {cat.goOutside && <i className="fab fa-pagelines"></i>}
-
-                    <button
-                      className={`new-home ${cat.foundHome ? "found" : ""}`}
-                      onClick={() => toggleFoundHome(cat.id)}
-                    >
-                      <i
-                        className="fas fa-home"
-                        title="Found home"
-                        aria-hidden="true"
-                      ></i>
-                    </button>
-
-                    <button onClick={() => handleDelete(cat.id)}>
-                      <i className="fas fa-trash"></i>
-                    </button>
-                  </div>
-                </li>
-              );
-            })}
-        </ul>
+        <ItemList
+          items={cats}
+          handleDelete={handleDelete}
+          toggleFoundHome={toggleFoundHome}
+        />
 
         {/* add cat */}
         <form className="new-cat-form" onSubmit={handleSubmit}>
