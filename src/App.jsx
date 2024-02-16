@@ -5,6 +5,7 @@ import Header from "./components/Header";
 function App() {
   const defaultInputValues = {
     catname: "",
+    foundHome: false,
   };
 
   const [formData, setFormData] = useState(defaultInputValues);
@@ -13,31 +14,39 @@ function App() {
     {
       id: Math.random(),
       catname: "Jojo",
+      foundHome: false,
     },
   ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
-
     const newCat = {
       id: Math.random(),
       catname: formData.catname,
+      foundHome: formData.foundHome,
     };
-
     console.log("newCat: ", newCat);
     setCats([...cats, newCat]);
     setFormData(defaultInputValues);
   };
 
-  const handleDelete = (id) => {
-    console.log("handleDelete: ", id);
+  const toggleFoundHome = (id) => {
+    const updatedCats = cats.map((cat) => {
+      if (cat.id === id) {
+        return { ...cat, foundHome: !cat.foundHome };
+      } else return cat;
+    });
+    console.log("updatedCats: ", updatedCats);
+    setCats(updatedCats);
+  };
 
+  const handleDelete = (id) => {
     const updatedCats = cats.filter((cat) => {
       return cat.id !== id;
     });
     setCats(updatedCats);
   };
+
   useEffect(() => {
     console.log("formData.catname: ", formData.catname);
     console.log("cats: ", cats);
@@ -64,9 +73,22 @@ function App() {
                     <span>{cat.catname}</span>
                   </div>
 
-                  <button onClick={() => handleDelete(cat.id)}>
-                    <i className="fas fa-trash"></i>
-                  </button>
+                  <div>
+                    <button
+                      className={`new-home ${cat.foundHome ? "found" : ""}`}
+                      onClick={() => toggleFoundHome(cat.id)}
+                    >
+                      <i
+                        className="fas fa-home"
+                        title="Found home"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+
+                    <button onClick={() => handleDelete(cat.id)}>
+                      <i className="fas fa-trash"></i>
+                    </button>
+                  </div>
                 </li>
               );
             })}
