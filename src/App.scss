@@ -51,6 +51,11 @@
     font-size: 0.9rem;
     color: $themecolorRed !important;
   }
+  .fa-pagelines {
+    font-size: 1.3rem;
+
+    color: $themecolorGreen;
+  }
   .new-home {
     &:hover {
       filter: brightness(70%);

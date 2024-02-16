@@ -5,6 +5,7 @@ import Header from "./components/Header";
 function App() {
   const defaultInputValues = {
     catname: "",
+    goOutside: true,
     foundHome: false,
   };
 
@@ -14,6 +15,7 @@ function App() {
     {
       id: Math.random(),
       catname: "Jojo",
+      goOutside: true,
       foundHome: false,
     },
   ]);
@@ -23,6 +25,7 @@ function App() {
     const newCat = {
       id: Math.random(),
       catname: formData.catname,
+      goOutside: formData.goOutside,
       foundHome: formData.foundHome,
     };
     console.log("newCat: ", newCat);
@@ -59,7 +62,7 @@ function App() {
         <h1>Cat shelter</h1>
         <p className="preamble">
           Current inhabitants in the Cat Shelter. <br />
-          If the house icon is enabled, the cat has found a home.
+          If the house icon is enabled, the cat has found a new home.
         </p>
 
         <ul className="cat-list">
@@ -74,6 +77,8 @@ function App() {
                   </div>
 
                   <div>
+                    {cat.goOutside && <i className="fab fa-pagelines"></i>}
+
                     <button
                       className={`new-home ${cat.foundHome ? "found" : ""}`}
                       onClick={() => toggleFoundHome(cat.id)}
@@ -111,6 +116,23 @@ function App() {
             </label>
 
             <br />
+
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  id="goOutside"
+                  checked={formData.goOutside}
+                  onChange={() => {
+                    setFormData({
+                      ...formData,
+                      goOutside: !formData.goOutside,
+                    });
+                  }}
+                />
+                <span>Wants to go outside</span>
+              </label>
+            </div>
           </div>
           <section className="btn-section">
             {" "}
