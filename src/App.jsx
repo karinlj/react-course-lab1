@@ -3,14 +3,23 @@ import "./App.scss";
 import Header from "./components/Header";
 
 function App() {
+  const defaultInputValues = {
+    catname: "",
+  };
+
+  const [formData, setFormData] = useState(defaultInputValues);
+
   const [cats, setCats] = useState([
     {
       id: Math.random(),
       catname: "Jojo",
-      goOutside: true,
-      foundHome: false,
     },
   ]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  };
 
   useEffect(() => {}, []);
 
@@ -38,6 +47,21 @@ function App() {
               );
             })}
         </ul>
+
+        {/* add cat */}
+        <form className="new-cat-form" onSubmit={handleSubmit}>
+          <div>
+            <label>
+              Name:
+              <input type="text" id="catname" required />{" "}
+            </label>
+            <br />
+          </div>
+          <section className="btn-section">
+            {" "}
+            <button>Add cat</button>
+          </section>
+        </form>
       </section>
     </>
   );
