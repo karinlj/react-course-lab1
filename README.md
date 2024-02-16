@@ -1,8 +1,33 @@
-# React + Vite
+# Cat Shelter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React course-Lab1
 
-Currently, two official plugins are available:
+### React project using the Vite tool.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+To clone
+
+`https://github.com/karinlj/react-course-lab1.git`
+
+To install
+
+`npm install`
+
+To run
+
+`npm run dev`
+
+## Built With
+
+- vite
+- React.js
+- Scss
+
+## Author
+
+- **Karin Ljunggren** - [karinlj](https://github.com/karinlj)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
