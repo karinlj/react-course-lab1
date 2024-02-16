@@ -27,8 +27,17 @@ function App() {
 
     console.log("newCat: ", newCat);
     setCats([...cats, newCat]);
+    setFormData(defaultInputValues);
   };
 
+  const handleDelete = (id) => {
+    console.log("handleDelete: ", id);
+
+    const updatedCats = cats.filter((cat) => {
+      return cat.id !== id;
+    });
+    setCats(updatedCats);
+  };
   useEffect(() => {
     console.log("formData.catname: ", formData.catname);
     console.log("cats: ", cats);
@@ -54,6 +63,10 @@ function App() {
                     <i className="fas fa-paw" aria-hidden="true"></i>
                     <span>{cat.catname}</span>
                   </div>
+
+                  <button onClick={() => handleDelete(cat.id)}>
+                    <i className="fas fa-trash"></i>
+                  </button>
                 </li>
               );
             })}
@@ -74,6 +87,7 @@ function App() {
                 }}
               />{" "}
             </label>
+
             <br />
           </div>
           <section className="btn-section">

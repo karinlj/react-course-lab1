@@ -39,6 +39,18 @@
       color: $themecolor;
     }
   }
+  button,
+  i {
+    padding: 5px 6px;
+    background: transparent;
+  }
+  .fa-paw {
+    color: $themecolorBlueLight;
+  }
+  .fa-trash {
+    font-size: 0.9rem;
+    color: $themecolorPinkdark !important;
+  }
 }
 
 //add cat
@@ -65,9 +77,10 @@
   input[type="text"] {
     width: 100%;
     padding-right: 0.5rem;
-    padding-bottom: 1rem;
+    padding: 0.7rem 0.5rem;
     border: none;
     border-bottom: 1px solid $themeBorderColor;
+    font-size: 1rem;
   }
 }
 
