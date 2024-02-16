@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.scss";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import ItemsList from "./components/ItemsList/ItemsList";
 import AddItemForm from "./components/AddItemForm/AddItemForm";
 

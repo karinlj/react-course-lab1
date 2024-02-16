@@ -1,6 +1,5 @@
 @import "../../variables.scss";
 
-//add cat
 .new-cat-form {
   width: 100%;
   > div {
@@ -31,9 +30,5 @@
   .btn-section {
     width: 100%;
     text-align: right;
-  }
-  .add-btn {
-    background: $themecolorGreen;
-    color: #fff;
   }
 }

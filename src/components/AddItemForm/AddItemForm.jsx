@@ -1,5 +1,6 @@
 import "./AddItemForm.scss";
 import { useState } from "react";
+import Button from "../Button/Button";
 
 const AddItemForm = ({ addItem }) => {
   const defaultInputValues = {
@@ -39,9 +40,7 @@ const AddItemForm = ({ addItem }) => {
             }}
           />{" "}
         </label>
-
         <br />
-
         <div>
           <label>
             <input
@@ -60,8 +59,7 @@ const AddItemForm = ({ addItem }) => {
         </div>
       </div>
       <section className="btn-section">
-        {" "}
-        <button className="add-btn">Add cat</button>
+        <Button />
       </section>
     </form>
   );

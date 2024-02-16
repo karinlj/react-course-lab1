@@ -36,24 +36,12 @@ h1 {
 p {
   color: #fff;
 }
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
 
+button {
+  border: 1px solid transparent;
+  border-radius: 8px;
   &:focus {
     outline: 2px dotted -webkit-focus-ring-color;
     outline-color: $themecolorBlue;
-  }
-}
-header {
-  text-align: right;
-  p {
-    color: $themecolorBlueSuperLight;
   }
 }
