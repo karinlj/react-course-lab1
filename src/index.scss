@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+@import "./variables.scss";
+
+//reset
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Quicksand, Helvetica, Arial, sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: $themecolorBlue;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: $themecolorPink;
+  margin: 1rem 0;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  &:hover {
+    border-color: #646cff;
+  }
+  &:focus {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+p {
+  color: #fff;
+}
+.header-text {
+  text-align: right;
+  font-weight: 600;
+}
