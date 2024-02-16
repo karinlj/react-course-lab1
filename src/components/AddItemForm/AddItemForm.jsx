@@ -1,5 +1,5 @@
 import "./AddItemForm.scss";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Button from "../Button/Button";
 
 const AddItemForm = ({ addItem }) => {
@@ -10,6 +10,11 @@ const AddItemForm = ({ addItem }) => {
   };
 
   const [formData, setFormData] = useState(defaultInputValues);
+
+  const inputText = useRef();
+  const focusInput = () => {
+    inputText.current.focus();
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +38,7 @@ const AddItemForm = ({ addItem }) => {
           <input
             type="text"
             id="catname"
+            ref={inputText}
             required
             value={formData.catname}
             onChange={(e) => {
@@ -59,7 +65,7 @@ const AddItemForm = ({ addItem }) => {
         </div>
       </div>
       <section className="btn-section">
-        <Button />
+        <Button handleClick={focusInput} />
       </section>
     </form>
   );

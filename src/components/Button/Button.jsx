@@ -1,7 +1,7 @@
 import "./Button.scss";
 
-const Button = () => {
-  return <button>Add cat</button>;
+const Button = ({ handleClick }) => {
+  return <button onClick={handleClick}>Add cat</button>;
 };
 
 export default Button;
