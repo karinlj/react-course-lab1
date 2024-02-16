@@ -2,7 +2,10 @@
 
 ## React course-Lab1
 
-### React project using the Vite tool.
+React project using the Vite tool.
+CRUD project adding cats to Cat Shelter list.
+Adding cat and choose if he needs to go outside or can be indoor cat.
+In list toggle if he found new home or not and delete if he has moved to the new home.
 
 ## Installation
 
