@@ -24,8 +24,6 @@ const AddItemForm = ({ addItem }) => {
       goOutside: formData.goOutside,
       foundHome: formData.foundHome,
     };
-    console.log("newCat: ", newCat);
-
     addItem(newCat);
     setFormData(defaultInputValues);
   };

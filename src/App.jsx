@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import ItemsList from "./components/ItemsList/ItemsList";
@@ -23,7 +23,6 @@ function App() {
         return { ...cat, foundHome: !cat.foundHome };
       } else return cat;
     });
-    console.log("updatedCats: ", updatedCats);
     setCats(updatedCats);
   };
 
@@ -33,10 +32,6 @@ function App() {
     });
     setCats(updatedCats);
   };
-
-  useEffect(() => {
-    console.log("cats: ", cats);
-  }, [cats]);
 
   return (
     <>
