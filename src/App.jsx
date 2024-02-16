@@ -16,12 +16,22 @@ function App() {
     },
   ]);
 
+  const handleChangeName = (e) => {
+    console.log("handleChangeName: ", e.target.value);
+    setFormData({
+      ...formData,
+      catname: e.target.value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submit");
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    console.log("formData.catname: ", formData.catname);
+  }, [formData]);
 
   return (
     <>
@@ -53,7 +63,15 @@ function App() {
           <div>
             <label>
               Name:
-              <input type="text" id="catname" required />{" "}
+              <input
+                type="text"
+                id="catname"
+                required
+                value={formData.catname}
+                onChange={(e) => {
+                  handleChangeName(e);
+                }}
+              />{" "}
             </label>
             <br />
           </div>
