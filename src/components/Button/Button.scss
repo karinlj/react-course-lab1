@@ -10,5 +10,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   background: $themecolorGreen;
+  transition: all 0.3s ease;
   color: #fff;
+  &:hover {
+    filter: brightness(70%);
+  }
 }

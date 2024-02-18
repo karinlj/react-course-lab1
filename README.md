@@ -23,9 +23,10 @@ To run
 
 ## Built With
 
-- vite
+- Vite
 - React.js
 - Scss
+- Fontawesome
 
 ## Author
 

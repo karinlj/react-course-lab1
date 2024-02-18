@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 const AddItemForm = ({ addItem }) => {
   const defaultInputValues = {
-    catname: "",
+    name: "",
     goOutside: true,
     foundHome: false,
   };
@@ -18,29 +18,29 @@ const AddItemForm = ({ addItem }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newCat = {
+    const newItem = {
       id: Math.random(),
-      catname: formData.catname,
+      name: formData.name,
       goOutside: formData.goOutside,
       foundHome: formData.foundHome,
     };
-    addItem(newCat);
+    addItem(newItem);
     setFormData(defaultInputValues);
   };
 
   return (
-    <form className="new-cat-form" onSubmit={handleSubmit}>
+    <form className="new-item-form" onSubmit={handleSubmit}>
       <div>
         <label>
           Name:
           <input
             type="text"
-            id="catname"
+            id="name"
             ref={inputText}
             required
-            value={formData.catname}
+            value={formData.name}
             onChange={(e) => {
-              setFormData({ ...formData, catname: e.target.value });
+              setFormData({ ...formData, name: e.target.value });
             }}
           />{" "}
         </label>

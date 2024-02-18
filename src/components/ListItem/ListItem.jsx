@@ -6,7 +6,7 @@ const ListItem = ({ item, toggleFoundHome, handleDelete }) => {
       <div>
         {" "}
         <i className="fas fa-paw" aria-hidden="true"></i>
-        <span>{item.catname}</span>
+        <span>{item.name}</span>
       </div>
 
       <div>

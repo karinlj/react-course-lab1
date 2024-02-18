@@ -8,7 +8,7 @@ function App() {
   const [cats, setCats] = useState([
     {
       id: Math.random(),
-      catname: "Jojo",
+      name: "Jojo",
       goOutside: true,
       foundHome: false,
     },
