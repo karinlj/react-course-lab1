@@ -1,6 +1,6 @@
 # Cat Shelter
 
-<img loading="lazy" width="500px" src="./assets/Screenshot.jpg" alt="Cat Shelter" />
+<img width="500px" src="./src/assets/Screenshot.jpg" alt="Cat Shelter" />
 
 ## React course-Lab1
 
