@@ -1,5 +1,7 @@
 # Cat Shelter
 
+<img loading="lazy" width="500px" src="./assets/images/Screenshot.jpg" alt="Cat Shelter" />
+
 ## React course-Lab1
 
 React project using the Vite tool. <br/>
