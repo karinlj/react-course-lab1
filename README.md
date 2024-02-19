@@ -17,6 +17,8 @@ To clone
 
 To install
 
+`cd react-course-lab1`
+
 `npm install`
 
 To run
